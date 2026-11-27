@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>KitsuneChess 公式サイト</title>
-<meta name="description" content="KitsuneChessの公式サイト。チェスアプリ「KitsuneChess - Chess Online」、ゲーム「Foxy Flap - Jenny's Adventure」、「きつね家計簿」を配信しています。">
+<title>KitsuneChess 公式サイト | KitsuneChess Official Website</title>
+<meta name="description" content="KitsuneChessの公式サイト。KitsuneChess - Chess Online、Foxy Flap、きつね家計簿、Kitsune Budget を配信しています。 Official website of KitsuneChess: KitsuneChess - Chess Online, Foxy Flap, Kitsune Kakeibo and Kitsune Budget.">
 <link rel="canonical" href="https://kitsunechess-app.com/">
 <link rel="icon" href="favicon.png">
 <style>
@@ -15,62 +15,83 @@
   header{background:#fff;border-bottom:3px solid var(--orange)}
   header .wrap{display:flex;align-items:center;gap:10px;padding:14px 18px}
   header img{width:44px;height:44px;border-radius:50%}
-  header h1{font-size:20px;margin:0}
+  header h1{font-size:20px;margin:0;flex:1}
   header small{display:block;font-size:12px;color:var(--muted);font-weight:400}
+  .lang{border:2px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit}
   h2{font-size:21px;border-left:6px solid var(--orange);padding-left:10px;margin:32px 0 14px}
   .app{background:#fff;border:2px solid var(--line);border-radius:16px;padding:18px;margin:0 0 16px}
   .app h3{margin:0 0 4px;font-size:19px}
   .app p{margin:0 0 10px}
+  .tag{display:inline-block;font-size:12px;font-weight:700;color:var(--muted);background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:0 10px;margin-left:6px;vertical-align:middle}
   .badge img{height:60px;width:auto}
   .contact{background:#fff;border:2px solid var(--line);border-radius:16px;padding:18px}
   .mail{font-size:18px;font-weight:700;word-break:break-all}
   .note{font-size:13px;color:var(--muted)}
   footer{margin-top:40px;background:#fff;border-top:3px solid var(--orange);padding:18px 0;text-align:center;font-size:13px;color:var(--muted)}
   footer a{color:var(--muted);margin:0 6px}
+  /* 言語の切りかえ：選んでいない言語の文は隠す */
+  body.en .ja{display:none} body:not(.en) .en{display:none}
 </style>
 </head>
 <body>
 <header><div class="wrap">
   <img src="jene-face.webp" alt="">
-  <h1>KitsuneChess 公式サイト<small>KitsuneChess Official Website</small></h1>
+  <h1><span class="ja">KitsuneChess 公式サイト</span><span class="en">KitsuneChess Official Website</span>
+    <small class="ja">KitsuneChess Official Website</small><small class="en">KitsuneChess 公式サイト</small></h1>
+  <button type="button" class="lang" id="langBtn">English</button>
 </div></header>
 
 <main class="wrap">
-  <p style="margin-top:22px">いつもKitsuneChessをご利用いただき、ありがとうございます。KitsuneChessが制作しているアプリをご紹介します。</p>
+  <p style="margin-top:22px" class="ja">いつもKitsuneChessをご利用いただき、ありがとうございます。KitsuneChessが制作しているアプリをご紹介します。</p>
+  <p style="margin-top:22px" class="en">Thank you for using KitsuneChess. Here are the apps we make.</p>
 
-  <h2>アプリの紹介</h2>
+  <h2><span class="ja">アプリの紹介</span><span class="en">Our Apps</span></h2>
 
   <div class="app">
     <h3>KitsuneChess - Chess Online</h3>
-    <p>オンラインで世界中のプレイヤーと対戦できるチェスアプリです。</p>
+    <p class="ja">オンラインで世界中のプレイヤーと対戦できるチェスアプリです。</p>
+    <p class="en">A chess app where you can play online against players around the world.</p>
     <a class="badge" href="https://play.google.com/store/apps/details?id=com.kitsunechess.chess">
-      <img src="https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png" alt="Google Play で手に入れよう"></a>
+      <img class="gp" src="https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png" alt="Google Play で手に入れよう"></a>
   </div>
 
   <div class="app">
     <h3>Foxy Flap - Jenny's Adventure</h3>
-    <p>キツネのジェニーと一緒に冒険するアクションゲームです。</p>
+    <p class="ja">キツネのジェニーと一緒に冒険するアクションゲームです。</p>
+    <p class="en">An action game where you go on an adventure with Jenny the fox.</p>
     <a class="badge" href="https://play.google.com/store/apps/details?id=com.kitsunechess.foxyflap">
-      <img src="https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png" alt="Google Play で手に入れよう"></a>
+      <img class="gp" src="https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png" alt="Google Play で手に入れよう"></a>
   </div>
 
   <div class="app">
-    <h3>きつね家計簿</h3>
-    <p>口座連携なしで、手入力でかんたんに使える家計簿アプリです。データは端末の中だけに保存されます。<a href="https://kitsunechess.com/kakeibo/">くわしい紹介はこちら</a></p>
-    <a class="badge" href="https://play.google.com/store/apps/details?id=com.kitsunechess.kakeibo">
-      <img src="https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png" alt="Google Play で手に入れよう"></a>
+    <h3>Kitsune Budget<span class="tag">English / USD</span></h3>
+    <p class="ja">英語・米ドルで使える家計簿アプリです。口座連携なしで、手入力でかんたんに使えます。データは端末の中だけに保存されます。</p>
+    <p class="en">A simple budget app in English and US dollars. No bank connection — just enter your money by hand. Your data stays only on your device.</p>
+    <a class="badge" href="https://play.google.com/store/apps/details?id=com.kitsunechess.kitsunebudget">
+      <img class="gp" src="https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png" alt="Google Play で手に入れよう"></a>
   </div>
 
-  <p class="note">Google Play および Google Play ロゴは Google LLC の商標です。</p>
+  <div class="app">
+    <h3>きつね家計簿<span class="tag">日本語 / 円</span></h3>
+    <p class="ja">口座連携なしで、手入力でかんたんに使える家計簿アプリです。データは端末の中だけに保存されます。<a href="https://kitsunechess.com/kakeibo/">くわしい紹介はこちら</a></p>
+    <p class="en">A simple budget app in Japanese and yen. No bank connection, and your data stays only on your device. <a href="https://kitsunechess.com/kakeibo/">Learn more (Japanese)</a></p>
+    <a class="badge" href="https://play.google.com/store/apps/details?id=com.kitsunechess.kakeibo">
+      <img class="gp" src="https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png" alt="Google Play で手に入れよう"></a>
+  </div>
 
-  <h2>チェスを学ぶ</h2>
-  <p>チェスのオープニングを一手ずつ学べるサイト「<a href="https://kitsunechess.com/">KitsuneChess</a>」も運営しています。</p>
+  <p class="note"><span class="ja">Google Play および Google Play ロゴは Google LLC の商標です。</span><span class="en">Google Play and the Google Play logo are trademarks of Google LLC.</span></p>
 
-  <h2>お問い合わせ</h2>
+  <h2><span class="ja">チェスを学ぶ</span><span class="en">Learn Chess</span></h2>
+  <p class="ja">チェスのオープニングを一手ずつ学べるサイト「<a href="https://kitsunechess.com/">KitsuneChess</a>」も運営しています。</p>
+  <p class="en">We also run <a href="https://kitsunechess.com/">KitsuneChess</a>, a website where you can learn chess openings one move at a time.</p>
+
+  <h2><span class="ja">お問い合わせ</span><span class="en">Contact</span></h2>
   <div class="contact">
-    <p>アプリに関するお問い合わせは、下記のメールアドレスまでお願いいたします。</p>
+    <p class="ja">アプリに関するお問い合わせは、下記のメールアドレスまでお願いいたします。</p>
+    <p class="en">For questions about our apps, please email us at the address below.</p>
     <p class="mail">info@kitsunechess-app.com</p>
-    <p class="note">For inquiries in English, please contact the address above.</p>
+    <p class="note ja">For inquiries in English, please contact the address above.</p>
+    <p class="note en">日本語でのお問い合わせも、上のアドレスで受け付けています。</p>
   </div>
 </main>
 
@@ -78,5 +99,31 @@
   <a href="https://kitsunechess.com/">KitsuneChess</a>
   <p>© 2026 KitsuneChess</p>
 </footer>
+
+<script>
+(function(){
+  var JA_BADGE='https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png';
+  var EN_BADGE='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png';
+  var lang;
+  try{ lang=localStorage.getItem('kcAppLang'); }catch(e){}
+  if(lang!=='ja'&&lang!=='en'){ lang=((navigator.language||'').toLowerCase().indexOf('ja')===0)?'ja':'en'; }
+  function apply(){
+    document.body.classList.toggle('en',lang==='en');
+    document.documentElement.lang=lang;
+    document.getElementById('langBtn').textContent=(lang==='en')?'日本語':'English';
+    var imgs=document.querySelectorAll('img.gp');
+    for(var i=0;i<imgs.length;i++){
+      imgs[i].src=(lang==='en')?EN_BADGE:JA_BADGE;
+      imgs[i].alt=(lang==='en')?'Get it on Google Play':'Google Play で手に入れよう';
+    }
+  }
+  document.getElementById('langBtn').onclick=function(){
+    lang=(lang==='en')?'ja':'en';
+    try{ localStorage.setItem('kcAppLang',lang); }catch(e){}
+    apply();
+  };
+  apply();
+})();
+</script>
 </body>
 </html>
